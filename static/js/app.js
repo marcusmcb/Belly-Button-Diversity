@@ -30,26 +30,26 @@ function buildCharts(sample) {
       }
     };
 
-    let data = [trace1]
+    let traceData = [trace1]
 
     let layout = {
       xaxis: { title: "OTU ID"}
     };
 
-    Plotly.newPlot('bubble', data, layout);
+    Plotly.newPlot('bubble', traceData, layout);
 
     d3.json(url).then(function(data) {
       let pieValues = data.sample_values.slice(0,10);
       let pieLabels = data.otu_ids.slice(0,10);
       let pieHover = data.otu_labels.slice(0,10);
-      let data = [{
+      let pieData = [{
         values: pieValues,
         labels: pieLabels,
         hovertext: pieHover,
         type: 'pie'
       }];
 
-      Plotly.newPlot('pie', data)
+      Plotly.newPlot('pie', pieData)
     
     });
   });
