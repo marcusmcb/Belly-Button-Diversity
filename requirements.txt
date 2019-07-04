@@ -123,7 +123,6 @@ numpy==1.15.4
 numpydoc==0.8.0
 oauth2==1.9.0.post1
 oauthlib==2.0.7
-odo==0.5.1
 olefile==0.46
 openpyxl==2.5.12
 openweathermapy==0.6.6
