@@ -1,2 +1,2 @@
-web: gunicorn Belly-Button-Diversity.app:app
+web: gunicorn Belly-Button-Diversity:app
 release: python manage.py db upgrade
